@@ -8,8 +8,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.crestasom.CustomAnnotationUsingJDBC.db.DbAccess;
-
 @Component
 public class RequestInceptor extends HandlerInterceptorAdapter {
 

@@ -1,4 +1,4 @@
-package com.crestasom.CustomAnnotationUsingJDBC.db;
+package com.crestasom.CustomAnnotationUsingJDBC;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

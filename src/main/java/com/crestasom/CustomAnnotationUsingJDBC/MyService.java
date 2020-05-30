@@ -1,4 +1,4 @@
-package com.crestasom.CustomAnnotationUsingJDBC.service;
+package com.crestasom.CustomAnnotationUsingJDBC;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,12 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.crestasom.CustomAnnotationUsingJDBC.Student;
-import com.crestasom.CustomAnnotationUsingJDBC.annotation.MyTransactional;
-import com.crestasom.CustomAnnotationUsingJDBC.db.DbAccess;
-
 @Service
-public class MyService implements MyServiceInterface {
+public class MyService {
 
 	@Autowired
 	DbAccess db;

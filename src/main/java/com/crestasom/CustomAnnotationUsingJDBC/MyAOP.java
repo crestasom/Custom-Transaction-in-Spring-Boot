@@ -1,4 +1,4 @@
-package com.crestasom.CustomAnnotationUsingJDBC.aop;
+package com.crestasom.CustomAnnotationUsingJDBC;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -8,9 +8,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
-import com.crestasom.CustomAnnotationUsingJDBC.annotation.MyTransactional;
-import com.crestasom.CustomAnnotationUsingJDBC.db.DbAccess;
-
 @Aspect
 @Configuration
 public class MyAOP {
@@ -18,7 +15,7 @@ public class MyAOP {
 	DbAccess db;
 	private static final Logger LOG = LoggerFactory.getLogger(MyAOP.class);
 
-	@Around("@annotation(com.crestasom.CustomAnnotationUsingJDBC.annotation.MyTransactional)")
+	@Around("@annotation(com.crestasom.CustomAnnotationUsingJDBC.MyTransactional)")
 	public Object transactionSQL(ProceedingJoinPoint pjp) throws Throwable {
 		LOG.info("running transaction");
 		Object output = null;

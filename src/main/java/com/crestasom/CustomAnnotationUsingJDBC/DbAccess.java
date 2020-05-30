@@ -1,4 +1,4 @@
-package com.crestasom.CustomAnnotationUsingJDBC.db;
+package com.crestasom.CustomAnnotationUsingJDBC;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,8 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
-
-import com.crestasom.CustomAnnotationUsingJDBC.Student;
 
 @Component
 public class DbAccess {
