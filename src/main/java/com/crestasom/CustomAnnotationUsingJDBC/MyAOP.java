@@ -17,7 +17,6 @@ public class MyAOP {
 
 	@Around("@annotation(com.crestasom.CustomAnnotationUsingJDBC.MyTransactional)")
 	public Object transactionSQL(ProceedingJoinPoint pjp) throws Throwable {
-		LOG.info("running transaction");
 		Object output = null;
 
 		try {
@@ -26,9 +25,7 @@ public class MyAOP {
 			db.commitTransaction();
 		} catch (Exception ex) {
 			db.rollBackTransaction();
-			LOG.info("exception occured inside transactional method");
-			ex.printStackTrace();
-
+			LOG.info("exception occured inside transactional method." + ex.getMessage());
 		}
 
 		return output;

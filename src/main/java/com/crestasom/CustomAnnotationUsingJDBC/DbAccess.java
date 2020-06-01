@@ -68,7 +68,7 @@ public class DbAccess {
 			conn.getCon().rollback();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 			LOG.info("Cannot rollback transaction: " + e.getCause().toString());
 		}
 	}
@@ -119,7 +119,6 @@ public class DbAccess {
 			}
 			stmt.executeUpdate();
 		} catch (SQLException ex) {
-			LOG.info("Throwing exception from dbaccess" + ex.getMessage());
 			throw new RuntimeException("SQLException:" + ex.getMessage());
 		}
 
